@@ -38,7 +38,7 @@ export default function DateSelection() {
       };
 
       const fetchAPI = async function getStaticProps() {
-        const res = await fetch(`http://127.0.0.1:8000/api/getpackagedetailbyholidayid/96/${sDateEdited}/${eDateEdited}`, fetchConfig);
+        const res = await fetch(`https://staging.bookingadmin.vacayou.com/api/getpackagedetailbyholidayid/96/${sDateEdited}/${eDateEdited}`, fetchConfig);
         res
         .json()
         .then(res => setOffers(res))
